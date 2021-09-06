@@ -1,0 +1,34 @@
+body{
+    font-family: 'Righteous', cursive;
+}
+
+.heading-primary{
+    margin-top: 3rem;
+    color: $colorWhite;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    display:inline-block;
+    letter-spacing: 2px;
+    transition: all .2s;
+
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.1) ;
+        text-shadow: .5rem 1rem 2rem rgba($colorBlack,.2)
+    }
+}
+
+.container__heading{
+    background-image: linear-gradient(to right,$color-dark-blue,#8397b9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    text-transform: uppercase;
+    display:inline-block;
+    letter-spacing: 2px;
+    transition: all .2s;
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1) ;
+        text-shadow: .5rem 1rem 2rem rgba($colorBlack,.2)
+    }
+}

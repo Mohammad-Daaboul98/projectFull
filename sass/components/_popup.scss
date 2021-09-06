@@ -1,0 +1,124 @@
+.popup {
+
+    height: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgba($colorBlack , .9);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .9s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+
+    &__heading{
+        opacity: 0;
+        visibility: hidden;
+        transition: all .9s ;
+    }
+
+    &__info{
+        @include center;
+        background-color: transparent;
+        width: 75%;
+        padding: 2rem 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .9s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+
+    &__img-box {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__img {
+        border-radius: 50%;
+        width: 50%;
+        width: 20rem;
+    }
+
+    &__about-box {
+        padding: 0 5rem;
+        width: 100%;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+
+    &__about {
+        color: $color-light-gray;
+        margin: auto;
+        width: 50%;
+        text-indent: 1.1rem;
+        @include respond (tab-port){
+            
+           width: 100%;
+        }
+    }
+
+    &__link {
+
+        &:visited,
+        &:link {
+            transition: all .2s;
+            display: inline-block;
+            background-color: $colorBlack;
+            text-decoration: none;
+            color:$colorWhite;
+        }
+
+        &:hover {
+            transform: rotate(5deg) scale(1.3);
+            box-shadow: 0 1rem 2rem rgba($colorBlack, .5);
+            color: $color-light-blue;
+        }
+    }
+
+    &__close{
+        &,
+        &:visited,
+        &:link{
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            color:$colorWhite;
+            text-decoration: none;
+            font-size: 4rem;
+            transition: all .2s;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 1.4s ease;
+        }
+
+        &:hover{
+            color:red;
+        }
+
+    }
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+        height: 100vh;
+    }
+    &:target &__info{
+        opacity: 1;
+        visibility: visible;
+
+    }
+
+    &:target &__close{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__heading{
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+}

@@ -1,0 +1,40 @@
+.btn{
+    &:visited,
+    &:link{
+        font-size: 2rem;
+        text-decoration: none;
+        color: $colorWhite;
+    }
+
+    &--gray{
+        text-transform: uppercase;
+        font-weight: 100;
+        position: absolute;
+        top:2rem;
+        right: 3rem;
+        background-color: $color-light-blue;
+        padding: 1.1rem 2rem ;
+        border-radius: 10rem;
+        display: inline-block;
+        box-shadow: 0 1.5rem 2rem rgba($colorBlack,.2);
+        transition: all .3s;
+
+        @include respond(phone){
+            width: 28%;
+            font-size: .5rem;
+            padding: 1rem ;
+            text-align: center;
+            background-color:$color-dark-blue;
+        }
+
+        &:hover{
+            transform: translateY(-.5rem) ;
+        }
+        &:active{
+            transform: translateY(0) ;
+        }
+    }
+
+
+
+}

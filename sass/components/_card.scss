@@ -1,0 +1,38 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 80%;
+    transition: all .2s;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    margin-top: 3rem;
+
+    @include respond(tab-port){
+        width: 100%;
+    }
+
+    @include respond(phone){
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+
+    &__photo{
+
+        width: 100%;
+    }
+
+    
+    &:hover{
+        transform: scale(1.1) ;
+        box-shadow: .5rem 1rem 2rem rgba($colorBlack,.2)
+    }
+    &:active{
+        transform: translateX(-2rem);
+        box-shadow: .10rem 2rem 2rem rgba($colorBlack,.5)
+    }
+
+    
+
+} 
